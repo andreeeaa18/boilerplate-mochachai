@@ -30,7 +30,7 @@ suite("Unit Tests", function () {
         !!"double negation",
         "Double negation of a truthy value is true"
       );
-      assert.isTrue(
+      assert.isNotTrue(
         { value: "truthy" },
         "Objects are truthy, but are not boolean values"
       );
