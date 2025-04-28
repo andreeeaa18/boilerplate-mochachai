@@ -26,7 +26,7 @@ suite("Functional Tests", function () {
       chai
         .request(server)
         .keepOpen()
-        .get("/hello??name=Andreea")
+        .get("/hello?name=Andreea")
         .end(function (err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.text, "hello Andreea");
