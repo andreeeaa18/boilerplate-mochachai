@@ -70,9 +70,15 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
+Browser.site =
+  "https://1da9a7b1-3859-4626-a29e-2998bf544794-00-5glllf4xh93i.riker.replit.dev/";
 
 suite("Functional Tests with Zombie.js", function () {
   this.timeout(5000);
+  const browser = new Browser();
+  suiteSetup(function (done) {
+    return browser.visit("/", done);
+  });
 
   suite("Headless browser", function () {
     test('should have a working "site" property', function () {
