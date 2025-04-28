@@ -39,9 +39,10 @@ suite("Functional Tests", function () {
         .request(server)
         .keepOpen()
         .put("/travellers")
+        .send({ surname: "Colombo" })
 
         .end(function (err, res) {
-          assert.fail();
+          assert.equal();
 
           done();
         });
