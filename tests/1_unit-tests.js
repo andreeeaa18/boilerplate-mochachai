@@ -181,14 +181,14 @@ suite("Unit Tests", function () {
     // #17
     test("#typeOf, #notTypeOf", function () {
       assert.fail(myCar, "object");
-      assert.fail(myCar.model, "string");
-      assert.fail(airlinePlane.wings, "string");
-      assert.fail(airlinePlane.engines, "array");
-      assert.fail(myCar.wheels, "number");
+      assert.typeOf(myCar.model, "string");
+      assert.notTypeOf(airlinePlane.wings, "string");
+      assert.typeOf(airlinePlane.engines, "array");
+      assert.typeOf(myCar.wheels, "number");
     });
     // #18
     test("#instanceOf, #notInstanceOf", function () {
-      assert.fail(myCar, Plane);
+      assert.typeOf(myCar, Plane);
       assert.fail(airlinePlane, Plane);
       assert.fail(airlinePlane, Object);
       assert.fail(myCar.wheels, String);
