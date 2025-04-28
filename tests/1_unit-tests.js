@@ -42,8 +42,8 @@ suite("Unit Tests", function () {
   suite("Equality", function () {
     // #5
     test("#equal, #notEqual", function () {
-      assert.notEqual(12, "12", "Numbers are coerced into strings with ==");
-      assert.notEqual(
+      assert.equal(12, "12", "Numbers are coerced into strings with ==");
+      assert.equalqual(
         { value: 1 },
         { value: 1 },
         "== compares object references"
